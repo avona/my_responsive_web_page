@@ -374,3 +374,108 @@ footer a {
   color: #333;
   padding: 1.5em;
 }
+
+@media screen and (max-width: 600px) {
+  .header__logo {
+    height: 45px;
+  }
+  .header__title {
+    font-size: 2.5em;
+  }
+  .fa.fa-bars {
+    font-size: 2em;    
+    position: absolute;
+    right: 0px;
+    border: 3px;
+    padding: 20px;
+    margin-right: 10px;
+  }
+  nav {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    font-size: 1.5em;
+
+    background-color: white;
+    color: black;
+
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-600px, 0);
+    transform: translate(-600px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.2s ease;
+  }
+  nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav__item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 850px) {
+  .fa {
+    visibility: hidden;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hero {
+    width: 60%;
+    order: -1;
+  }
+  .weather {
+    width: 40%;
+  }
+  .news.top-news {
+    order: 1;
+  }
+  .scores {
+    order: 2;
+  }
+  .news.recent-news {
+    order: 3;
+  }
+}
+
+@media screen and (min-width: 851px) {
+  .fa {
+    visibility: hidden;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hero {
+    width: 50%;
+    order: -1;
+  }
+  .news.top-news {
+    width: 50%
+  }
+  .scores {
+    order: 1;
+    width: 60%;
+  }
+  .weather {
+    width: 40%;
+    order: 2;
+  }
+  .news.recent-news {
+    order: 3;
+  } 
+}
+
+@media screen and (min-width: 1100px) {
+  body {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fa {
+    visibility: hidden;
+  }
+}
